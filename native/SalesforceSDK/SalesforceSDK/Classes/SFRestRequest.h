@@ -94,7 +94,7 @@ extern NSString * const kSFDefaultRestEndpoint;
     SFRestMethod _method;
     NSString *_path;
     NSDictionary *_queryParams;
-    id<SFRestDelegate> _delegate;
+    id<SFRestDelegate> _delegate;    
 }
 
 
@@ -117,6 +117,10 @@ extern NSString * const kSFDefaultRestEndpoint;
  */
 @property (nonatomic, retain) NSDictionary *queryParams;
 
+/**
+ * The tag for the request (optional).
+ */
+@property (nonatomic, assign) NSInteger tag;
 
 /**
  * The delegate for this request. Notified of request status.
